@@ -19,6 +19,27 @@ def move(array, index, value = "X")
   array[index] = value
 end
 
+def valid_move?(board, index)
+  if board[index] == " "
+    true
+  elsif board[index] == "X" || board[index] == "O"
+    false
+  elsif board[index] == nil
+    false
+  end
+end
+
+def position_taken?(board, index)
+  if board[index] == " "
+    false
+  elsif board[index] == ""
+    false
+  elsif board[index] == nil
+    false
+  elsif board[index] == "X" || board[index] == "O"
+    true
+  end
+end
 
 
 def turn
